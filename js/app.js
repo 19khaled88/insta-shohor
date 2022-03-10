@@ -56,6 +56,12 @@ const switchTab = (id) => {
 
 const createPost = (post) => {
   console.log(post)
+  const comments = post.comments[0]
+  const arrayObject = Object.values(comments)
+
+  // let comment = comments.map((com) => {
+  //   console.log(com.user)
+  // })
   const image = post.image
   const userImage = post.userImage
   const div = document.createElement('article')
@@ -129,10 +135,11 @@ const createPost = (post) => {
 
                   <div class="post__description">
                     <small>
+
                       <a class="post__name--underline" href="#">
-                          ${post.comments?.user}
+                          ${arrayObject[0]}
                       </a>
-                      ${post.comments?.text}
+                      ${arrayObject[1]}
                     </small>
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
