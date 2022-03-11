@@ -104,7 +104,17 @@
       </p>
 
       <p>Question 2 : What does javascript event loop do?</p>
-      <p>Answer:</p>
+      <p>
+        Answer:Javascript naturally follows synchronous and blocking patter. But
+        to make this process asynchronous, event loop works behind the scene.
+        Event loop check whether call stack is empty before pushing new
+        functions onto it and keep track both call stack and event queue or
+        callback queue. Event loop remains working until event queue having
+        functions available in it waiting to be push into call stack. So, it is
+        clear that event loop keeps interconnection between call stack and event
+        queue by collecting functions from event queue and push them into call
+        stack to be executed
+      </p>
     </section>
     <footer></footer>
 
